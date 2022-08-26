@@ -3,31 +3,31 @@
     "version": "1.0.0",
     "description": "OOP",
     "main": "index.js",
-    "directories": {
-      "src": "src",
-      "lib": "lib",
-      "test": "test",
-      "dist": "dist"
+        "directories": {
+        "src": "src",
+        "lib": "lib",
+        "test": "test",
+        "dist": "dist"
     },
     "scripts": {
-      "test": "jest --verbose test/*"
+        "test": "jest --verbose test/*"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/grailedemperor/EmployeeGen.git"
+        "type": "git",
+        "url": "git+https://github.com/grailedemperor/EmployeeGen.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/grailedemperor/EmployeeGen/issues"
+        "url": "https://github.com/grailedemperor/EmployeeGen/issues"
     },
     "homepage": "https://github.com/grailedemperor/EmployeeGen#readme",
     "dependencies": {
-      "fs": "0.0.1-security",
-      "inquirer": "^6.3.1",
-      "open": "^7.0.0"
+        "fs": "0.0.1-security",
+        "inquirer": "^6.3.1",
+        "open": "^7.0.0"
     },
     "devDependencies": {
-      "jest": "^24.8.0"
+        "jest": "^29.0.0"
     }
-  }
+}

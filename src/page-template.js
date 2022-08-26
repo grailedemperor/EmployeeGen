@@ -1,6 +1,6 @@
 const render = (teamMembers) => {
 
-const renderHeader = ({managerName}) =>
+const renderHeader = (managerName) =>
 `
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@ const renderHeader = ({managerName}) =>
         <div class="row">
          <div class="team-area col-12 d-flex justify-content-center">
 `;
-const renderManager = ({managerName, managerId, managerEmail, managerNumber}) =>
+const renderManager = (managerName, managerId, managerEmail, managerNumber) =>
 `
           <div class="card employee-card">
             <div class="card-header">
@@ -42,7 +42,7 @@ const renderManager = ({managerName, managerId, managerEmail, managerNumber}) =>
             </div>
           </div>
 `;
-const renderEngineer = ({engineerName, engineerId, engineerEmail, engineerGit}) =>
+const renderEngineer = (engineerName, engineerId, engineerEmail, engineerGit) =>
 `
            <div class="card employee-card">
             <div class="card-header">
@@ -58,7 +58,7 @@ const renderEngineer = ({engineerName, engineerId, engineerEmail, engineerGit}) 
             </div>
           </div>
 `;
-const renderIntern = ({internName, internId, internEmail, internSchool}) =>
+const renderIntern = (internName, internId, internEmail, internSchool) =>
 `
            <div class="card employee-card">
             <div class="card-header">
@@ -93,10 +93,8 @@ renderIntern();
 renderFooter();
 };
 
-module.exports = {
-    header: renderHeader,
-    manager: renderManager,
-    engineer: renderEngineer,
-    intern: renderIntern,
-    footer: renderFooter,
+ module.exports = {
+    render
 }
+
+

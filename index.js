@@ -1,10 +1,11 @@
-import fs from "fs"; 
-import inquirer from "inquirer"; 
-import path from "path";
-import Manager from "./lib/Manager";
-import Engineer from ".lib/Engineer";
-import Intern from "./lib/Intern";
-import render from "./src/page-template.js";
+const fs = require("fs"); 
+const inquirer = require("inquirer"); 
+const path = require("path");
+const Employee = require("./lib/Employee.js");
+const Manager = require("./lib/Manager.js");
+const Engineer = require("./lib/Engineer.js");
+const Intern = require("./lib/Intern.js");
+const {render} = require("./src/page-template.js");
 
 // const team = [render.header(), render.footer()];
 
@@ -54,7 +55,7 @@ function appMenu(){
           name:'managerEmail',
           message:"What is your team manager's email?",
           validate: (answer) => {
-            const pass = answer.match(/\$+@\$+\.\$+/)
+            const pass = answer.match(/\S+@\S+\.\S+/)
             if (pass) {
               return true;
             }
@@ -150,7 +151,7 @@ function appMenu(){
           name:'engineerEmail',
           message:"What is your engineer's email?",  
           validate: (answer) => {
-            const pass = answer.match(/\$+@\$+\.\$+/)
+            const pass = answer.match(/\S+@\S+\.\S+/)
             if (pass) {
               return true;
             }
@@ -217,7 +218,7 @@ function appMenu(){
           name:'internEmail',
           message:"What is your intern's email?",  
           validate: (answer) => {
-            const pass = answer.match(/\$+@\$+\.\$+/)
+            const pass = answer.match(/\S+@\S+\.\S+/)
             if (pass) {
               return true;
             }
@@ -262,18 +263,3 @@ function appMenu(){
 appMenu();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
