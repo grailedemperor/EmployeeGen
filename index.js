@@ -5,7 +5,7 @@ const Employee = require("./lib/Employee.js");
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
-const {render} = require("./src/page-template.js");
+const render = require("./src/page-template.js");
 
 // const team = [render.header(), render.footer()];
 
@@ -242,7 +242,7 @@ function appMenu(){
           answers.internName,
           answers.internId,
           answers.internEmail,
-          answers.intern
+          answers.internSchool
         );
         teamMembers.push(intern);
         idArray.push(answers.internId);

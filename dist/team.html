@@ -1,21 +1,4 @@
-const render = (teamMembers) => { 
-    let template = ``;
-    template = renderHeader();
-    for (var i = 0; i < teamMembers.length; i++ ){
-        if (teamMembers[i].getRole() === "Manager" ){
-           template += renderManager(teamMembers[i])
-        } else if (teamMembers[i].getRole() === "Engineer" ){
-            template += renderEngineer(teamMembers[i])
-        } else if (teamMembers[i].getRole() === "Intern" ){
-            template += renderIntern(teamMembers[i])
-        } 
-    }
-    template += renderFooter();
-    return template;
-}
 
-const renderHeader = () =>
-`
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,57 +22,49 @@ const renderHeader = () =>
     <div class="container">
         <div class="row">
          <div class="team-area col-12 d-flex justify-content-center">
-`;
-const renderManager = ( {name, id, email, number} ) =>
-`
+
           <div class="card employee-card">
             <div class="card-header">
-               <h2 class="card-title">${name}</h2>
+               <h2 class="card-title">andrew</h2>
                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: ${id} </li>
-                    <li class="list-group-item">Email: ${email}</li>
-                    <li class="list-group-item">Office Number: ${number}</li>
+                    <li class="list-group-item">ID: 6547 </li>
+                    <li class="list-group-item">Email: andrew@foo.com</li>
+                    <li class="list-group-item">Office Number: 6254984453</li>
                 </ul>
             </div>
           </div>
-`;
-const renderEngineer = ({name, id, email, git}) =>
-`
+
            <div class="card employee-card">
             <div class="card-header">
-               <h2 class="card-title">${name}</h2>
+               <h2 class="card-title">matt</h2>
                <h3 class="card-title"><i class="fas fa-screwdriver mr-2"></i>Engineer</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: ${id} </li>
-                    <li class="list-group-item">Email: ${email}</li>
-                    <li class="list-group-item">GitHub: https://github.com/${git}/</li>
+                    <li class="list-group-item">ID: 3214 </li>
+                    <li class="list-group-item">Email: matt@foo.com</li>
+                    <li class="list-group-item">GitHub: https://github.com/grailedemperor/</li>
                 </ul>
             </div>
           </div>
-`;
-const renderIntern = ({name, id, email, school}) =>
-`
+
            <div class="card employee-card">
             <div class="card-header">
-               <h2 class="card-title">${name}</h2>
+               <h2 class="card-title">tony</h2>
                <h3 class="card-title"><i class="fas fa-university mr-2"></i>Intern</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: ${id} </li>
-                    <li class="list-group-item">Email: ${email}</li>
-                    <li class="list-group-item">School: ${school}</li>
+                    <li class="list-group-item">ID: 4123 </li>
+                    <li class="list-group-item">Email: tony@foo.com</li>
+                    <li class="list-group-item">School: UCLA</li>
                 </ul>
             </div>
           </div>
-`;
-const renderFooter = () => 
-`
+
          </div>
 
         </div>
@@ -98,10 +73,4 @@ const renderFooter = () =>
     
 </body>
 </html>
-
-`;
-
- module.exports = render 
-
-
 
